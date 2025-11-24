@@ -1,240 +1,123 @@
-:root {
-    --primary-blue: #004d9c;
-    --secondary-blue: #1e88e5;
-    --white: #ffffff;
-    --text-color: #333;
-}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نادي الهلال السعودي</title>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: all 0.3s ease-in-out;
-}
+    <style>
+        body {
+            font-family: "Tahoma", sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #222;
+        }
 
-body {
-    font-family: 'Cairo', sans-serif;
-    line-height: 1.6;
-    background-color: var(--white);
-    color: var(--text-color);
-    direction: rtl;
-}
+        header {
+            background: linear-gradient(#001f5b, #003b9b);
+            padding: 40px;
+            color: white;
+            text-align: center;
+        }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
 
-.section {
-    padding: 80px 0;
-    text-align: center;
-}
+        nav {
+            background: #003b9b;
+            padding: 10px 20px;
+            text-align: center;
+        }
 
-.section.dark {
-    background-color: var(--primary-blue);
-    color: var(--white);
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
 
-.section h2 {
-    font-size: 2.5em;
-    font-weight: 900;
-    margin-bottom: 10px;
-    position: relative;
-    padding-bottom: 15px;
-}
+        section {
+            padding: 30px;
+            background: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+        }
 
-.section h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: var(--secondary-blue);
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
+        h2 {
+            color: #003b9b;
+            border-right: 5px solid #003b9b;
+            padding-right: 10px;
+        }
 
-.subtitle {
-    font-size: 1.2em;
-    color: #e0e0e0;
-    margin-bottom: 40px;
-}
+        footer {
+            margin-top: 40px;
+            background: #001f5b;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: 15px;
+        }
+    </style>
+</head>
 
-.header {
-    background-color: var(--primary-blue);
-    color: var(--white);
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
+<body>
 
-.header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    <header>
+        <h1>نادي الهلال السعودي</h1>
+        <p>الزعيم الآسيوي – أكبر نادي في آسيا</p>
+    </header>
 
-.logo {
-    font-size: 1.8em;
-    font-weight: 900;
-}
+    <nav>
+        <a href="#history">تاريخ التأسيس</a>
+        <a href="#achievements">الإنجازات</a>
+        <a href="#players">أشهر اللاعبين</a>
+        <a href="#arena">الملعب</a>
+    </nav>
 
-.header ul {
-    list-style: none;
-    display: flex;
-}
+    <section id="history">
+        <h2>تاريخ تأسيس نادي الهلال</h2>
+        <p>
+            تأسس نادي الهلال السعودي عام 1957 م على يد عبدالرحمن بن سعيد في مدينة الرياض،
+            ويعتبر واحداً من أكبر وأشهر الأندية في آسيا.  
+            حصل على لقب "الزعيم" بسبب كثرة بطولاته المحلية والقارية.
+        </p>
+    </section>
 
-.header ul li {
-    margin-right: 25px;
-}
+    <section id="achievements">
+        <h2>أهم إنجازات الهلال</h2>
+        <ul>
+            <li>تحقيق دوري روشن السعودي 18 مرة.</li>
+            <li>تحقيق كأس الملك 10 مرات.</li>
+            <li>تحقيق دوري أبطال آسيا 4 مرات (رقم قياسي).</li>
+            <li>الوصول لنهائي كأس العالم للأندية 2022.</li>
+        </ul>
+    </section>
 
-.header ul li a {
-    color: var(--white);
-    text-decoration: none;
-    font-weight: 700;
-    padding: 5px 0;
-    position: relative;
-}
+    <section id="players">
+        <h2>أشهر اللاعبين في تاريخ الهلال</h2>
+        <ul>
+            <li>يوسف الثنيان</li>
+            <li>سامي الجابر</li>
+            <li>محمد الشلهوب</li>
+            <li>ياسر القحطاني</li>
+            <li>سالم الدوسري</li>
+        </ul>
+    </section>
 
-.header ul li a:hover {
-    color: var(--secondary-blue);
-}
+    <section id="arena">
+        <h2>ملعب الهلال</h2>
+        <p>
+            يستضيف نادي الهلال مبارياته على ملعب الملك فهد الدولي و ملعب الأمير فيصل بن فهد.  
+            كما يمتلك النادي ملعبًا جديدًا قيد الإنشاء ضمن مشروع الرياض الرياضي.
+        </p>
+    </section>
 
-.header ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    right: 0;
-    width: 0;
-    height: 3px;
-    background-color: var(--white);
-    transition: width 0.3s ease;
-}
+    <footer>
+        © 2025 — جميع الحقوق محفوظة — تصميم قروب 1   
+    </footer>
 
-.header ul li a:hover::after {
-    width: 100%;
-    left: 0;
-}
-
-.hero {
-    background-image: url('https://almrj3.com/wp-content/uploads/…/hilal-hero.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    color: var(--white);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-}
-
-.hero .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.5);
-}
-
-.hero-content {
-    z-index: 1;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 4em;
-    letter-spacing: 1px;
-}
-
-.hero p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-}
-
-.cta-button {
-    background-color: var(--secondary-blue);
-    color: var(--white);
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 700;
-    border: 2px solid var(--secondary-blue);
-}
-
-.cta-button:hover {
-    background-color: var(--primary-blue);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.history-grid {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.text-content {
-    flex: 2;
-    padding: 20px;
-    border-right: 4px solid var(--secondary-blue);
-    text-align: justify;
-}
-
-.image-content {
-    flex: 1;
-}
-
-.image-content img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.caption {
-    margin-top: 10px;
-    font-style: italic;
-    color: var(--primary-blue);
-}
-
-.trophies-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.trophy-card {
-    background-color: var(--white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.trophy-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-}
-
-.trophy-card h3 {
-    color: var(--primary-blue);
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #eee;
-}
-
-.trophy-card ul {
-    list-style: none;
-    padding: 0;
-}
-
-.trophy-card ul li {
-    padding: 8px 0;
-    border-bottom: 1px dashed #eee;
-}
-
-.players-grid {
-    display: grid;
+</body>
