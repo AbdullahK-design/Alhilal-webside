@@ -1,90 +1,209 @@
-/* ==== إعدادات عامة ==== */
-body {
-    margin: 0;
-    font-family: "Tajawal", sans-serif;
-    background: #f4f4f4;
-    color: #111;
+color: var(--primary-blue);
 }
 
-/* ==== الهيدر ==== */
-.header {
-    background: #002b7f;
-    color: white;
-    padding: 15px;
+/* ==== قسم الإنجازات (Trophies) ==== */
+.trophies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: right;
+    margin-top: 40px;
 }
 
-.header nav {
+.trophy-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.trophy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.trophy-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--light-gray);
+    padding-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.trophy-card ul {
+    list-style: none;
+}
+
+.trophy-card ul li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.trophy-card ul li:last-child {
+    border-bottom: none;
+}
+
+/* ==== قسم نجوم الفريق (Squad) ==== */
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.player-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.player-card:hover {
+    transform: scale(1.05);
+}
+
+.player-image {
+    /* مكان الصورة */
+    height: 250px;
+    background-color: var(--primary-blue);
+    /* يجب استبدالها بصورة حقيقية */
+}
+
+.player-card h4 {
+    color: var(--primary-blue);
+    margin-top: 15px;
+}
+
+.player-card p {
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* ==== قسم الأساطير (Stars) ==== */
+.legends-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    color: var(--white);
+}
+
+.legend-card {
+    background-color: var(--primary-blue);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.legend-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    color: var(--light-gray);
+}
+
+.legend-card p {
+    font-style: italic;
+    font-size: 1em;
+}
+
+/* ==== ملعب الهلال (Arena) ==== */
+.arena-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 40px;
+    text-align: right;
+    margin-top: 40px;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+.arena-content .arena-details {
+    flex: 2;
 }
 
-nav ul {
+.arena-content .arena-details p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.arena-content ul {
     list-style: none;
-    display: flex;
-    gap: 20px;
+    padding-right: 0;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
+.arena-content ul li {
+    background-color: var(--light-gray);
+    border-right: 3px solid var(--secondary-blue);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
 }
 
-/* ==== الصورة الرئيسية ==== */
-.hero {
-    background: url('https://upload.wikimedia.org/wikipedia/commons/2/25/Al-Hilal_FC_fans.jpg') center/cover;
-    height: 350px;
-    position: relative;
-}
-
-.hero .overlay {
-    background: rgba(0, 0, 0, 0.55);
-    height: 100%;
-    width: 100%;
-    position: absolute;
-}
-
-.hero h2, .hero p {
-    position: relative;
-    color: white;
-    text-align: center;
-}
-
-.hero h2 {
-    padding-top: 120px;
-    font-size: 32px;
-}
-
-.hero p {
-    font-size: 18px;
-}
-
-/* ==== الأقسام ==== */
-.section {
-    padding: 40px 20px;
-}
-
-.section.dark {
-    background: #002b7f;
-    color: white;
-}
-
-.section h2 {
-    font-size: 26px;
-    margin-bottom: 15px;
-}
-
-/* ==== الفوتر ==== */
+/* ==== الفوتر (Footer) ==== */
 .footer {
-    background: #111;
-    color: white;
+    background-color: var(--dark-bg);
+    color: var(--light-gray);
+    padding: 30px 0;
     text-align: center;
-    padding: 20px;
-    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.footer-links a {
+    color: var(--secondary-blue);
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--white);
+}
+
+.footer p {
+    margin-top: 15px;
+}
+
+/* استجابة التصميم (Media Queries) */
+@media (max-width: 900px) {
+    .header nav {
+        flex-direction: column;
+    }
+    .header ul {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header ul li {
+        margin: 5px 15px;
+    }
+    .hero h2 {
+        font-size: 3em;
+    }
+    .history-grid, .arena-content {
+        flex-direction: column;
+    }
+    .history-grid .image-content {
+        order: -1;
+    }
+    .trophy-card {
+        text-align: center;
+    }
+    .trophy-card ul {
+        padding: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .section {
+        padding: 50px 0;
+    }
+    .hero h2 {
+        font-size: 2em;
+    }
+    .hero p {
+        font-size: 1.2em;
+    }
 }
