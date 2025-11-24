@@ -1,52 +1,4 @@
-caption {
-    margin-top: 10px;
-    font-style: italic;
-    color: var(--primary-blue);
-}
-
-/* ==== قسم الإنجازات (Trophies) ==== */
-.trophies-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    text-align: right;
-    margin-top: 40px;
-}
-
-.trophy-card {
-    background-color: var(--white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.trophy-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.trophy-card h3 {
-    color: var(--primary-blue);
-    margin-bottom: 15px;
-    border-bottom: 2px solid var(--light-gray);
-    padding-bottom: 10px;
-    font-size: 1.5em;
-}
-
-.trophy-card ul {
-    list-style: none;
-}
-
-.trophy-card ul li {
-    padding: 8px 0;
-    border-bottom: 1px dashed #eee;
-}
-
-/* ==== قسم نجوم الفريق (Squad) ==== */
-.players-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
@@ -55,17 +7,18 @@ caption {
     background-color: var(--white);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .player-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 
 .player-image {
+    width: 100%;
     height: 250px;
-    background-color: var(--primary-blue); /* لون Placeholder للصورة */
+    object-fit: cover;
 }
 
 .player-card h4 {
@@ -79,70 +32,69 @@ caption {
     color: #666;
 }
 
-/* ==== قسم الأساطير (Stars) ==== */
 .legends-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 40px;
-    color: var(--white);
 }
 
 .legend-card {
-    background-color: var(--primary-blue); /* خلفية زرقاء داكنة */
+    background-color: var(--primary-blue);
     padding: 25px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.legend-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 
 .legend-card h3 {
+    color: #e0e00;
     margin-bottom: 10px;
     font-size: 1.8em;
-    color: var(--light-gray);
 }
 
 .legend-card p {
-    font-style: italic;
+    color: #f0f0f0;
     font-size: 1em;
+    font-style: italic;
 }
 
-/* ==== ملعب الهلال (Arena) ==== */
 .arena-content {
     display: flex;
     align-items: center;
     gap: 40px;
-    text-align: right;
-    margin-top: 40px;
+    flex-wrap: wrap;
 }
 
-.arena-content .arena-details {
+.arena-details {
     flex: 2;
 }
 
-.arena-content .arena-details p {
+.arena-details p {
     font-size: 1.1em;
-    margin-bottom: 20px;
     line-height: 1.8;
+    margin-bottom: 20px;
 }
 
-.arena-content ul {
-    list-style: none;
-    padding-right: 0;
+.arena-photo img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out;
 }
 
-.arena-content ul li {
-    background-color: var(--light-gray);
-    border-right: 3px solid var(--secondary-blue); /* خط أزرق مميز */
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px 0 0 5px;
+.arena-photo img:hover {
+    transform: scale(1.02);
 }
 
-/* ==== الفوتر (Footer) ==== */
 .footer {
-    background-color: var(--dark-bg);
-    color: var(--light-gray);
+    background-color: var(--primary-blue);
+    color: var(--white);
     padding: 30px 0;
     text-align: center;
     font-size: 0.9em;
@@ -152,14 +104,12 @@ caption {
     color: var(--secondary-blue);
     text-decoration: none;
     margin: 0 15px;
-    transition: color 0.3s;
 }
 
 .footer-links a:hover {
     color: var(--white);
 }
 
-/* استجابة التصميم (Media Queries) لجعل الموقع يعمل على الجوالات */
 @media (max-width: 900px) {
     .header nav {
         flex-direction: column;
@@ -175,17 +125,12 @@ caption {
     .hero h2 {
         font-size: 3em;
     }
-    .history-grid, .arena-content {
+    .history-grid,
+    .arena-content {
         flex-direction: column;
     }
     .history-grid .image-content {
         order: -1;
-    }
-    .trophy-card {
-        text-align: center;
-    }
-    .trophy-card ul {
-        padding: 0;
     }
 }
 
