@@ -1,0 +1,90 @@
+/* ==== إعدادات عامة ==== */
+body {
+    margin: 0;
+    font-family: "Tajawal", sans-serif;
+    background: #f4f4f4;
+    color: #111;
+}
+
+/* ==== الهيدر ==== */
+.header {
+    background: #002b7f;
+    color: white;
+    padding: 15px;
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* ==== الصورة الرئيسية ==== */
+.hero {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/2/25/Al-Hilal_FC_fans.jpg') center/cover;
+    height: 350px;
+    position: relative;
+}
+
+.hero .overlay {
+    background: rgba(0, 0, 0, 0.55);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.hero h2, .hero p {
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.hero h2 {
+    padding-top: 120px;
+    font-size: 32px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* ==== الأقسام ==== */
+.section {
+    padding: 40px 20px;
+}
+
+.section.dark {
+    background: #002b7f;
+    color: white;
+}
+
+.section h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+/* ==== الفوتر ==== */
+.footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
