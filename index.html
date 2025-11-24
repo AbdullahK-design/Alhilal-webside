@@ -1,163 +1,240 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نادي الهلال السعودي - الزعيم</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+:root {
+    --primary-blue: #004d9c;
+    --secondary-blue: #1e88e5;
+    --white: #ffffff;
+    --text-color: #333;
+}
 
-<body>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
 
-    <header class="header">
-        <nav class="container">
-            <h1 class="logo">نــادي الهــلال 💙</h1>
-            <ul>
-                <li><a href="#history">📜 قصة التأسيس</a></li>
-                <li><a href="#trophies">🏆 سجل الإنجازات</a></li>
-                <li><a href="#squad">🌟 نجوم الفريق</a></li>
-                <li><a href="#stars">أسـاطير النادي</a></li>
-                <li><a href="#arena">🏟️ معقل الزعيم</a></li>
-            </ul>
-        </nav>
-    </header>
+body {
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.6;
+    background-color: var(--white);
+    color: var(--text-color);
+    direction: rtl;
+}
 
-    <section class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h2>الزعــيــم .. سيّد القارة الآسيوية</h2>
-            <p>النادي الأكثر تحقيقًا للبطولات في المملكة العربية السعودية والقارة الآسيوية.</p>
-            <a href="#trophies" class="cta-button">اكتشف تاريخنا المشرق</a>
-        </div>
-    </section>
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
 
-    <section id="history" class="section">
-        <div class="container">
-            <h2>📜 قصة تأسيس نادي الهلال</h2>
-            <div class="history-grid">
-                <div class="text-content">
-                    <p>
-                        تأسس نادي الهلال السعودي في 16 أكتوبر 1957م في مدينة الرياض، على يد المؤسس والرمز الخالد الشيخ عبد الرحمن بن سعيد - رحمه الله.
-                    </p>
-                    <p>
-                        كان الاسم الأول للنادي هو "النادي الأولمبي". لكن في 3 ديسمبر 1957م**، صدر الأمر الملكي من **الملك سعود بن عبد العزيز - رحمه الله - بتغيير الاسم إلى "نادي الهلال" بعد أن وقع اختياره على هذا الاسم الجميل من بين ثلاثة أسماء مقترحة.
-                    </p>
-                    <p>
-                        منذ ذلك الحين، انطلق الهلال ليصبح منارة رياضية، وحقق الأرقام القياسية محلياً وقارياً وعالمياً، مؤكداً لقبه "الزعيم".
-                    </p>
-                </div>
-                <div class="image-content">
-                    <p class="caption">المؤسس: الشيخ عبد الرحمن بن سعيد</p>
-                </div>
-            </div>
-        </div>
-    </section>
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
 
-    <section id="trophies" class="section dark">
-        <div class="container">
-            <h2>🏆 سجل الإنجازات القياسي</h2>
-            <p class="subtitle">الهلال هو النادي الأكثر تتويجاً في آسيا بأكثر من 65 بطولة رسمية.</p>
-            <div class="trophies-grid">
-                <div class="trophy-card">
-                    <h3>البطولات القارية والعالمية</h3>
-                    <ul>
-                        <li>**دوري أبطال آسيا:** 🥇 4 مرات (الرقم القياسي الآسيوي)</li>
-                        <li>**المركز الرابع في كأس العالم للأندية:** 🌍 (مرتين - أفضل إنجاز لنادٍ سعودي)</li>
-                        <li>**كأس الكؤوس الآسيوية:** 🥈 مرتين</li>
-                    </ul>
-                </div>
-                <div class="trophy-card">
-                    <h3>البطولات المحلية الرئيسية</h3>
-                    <ul>
-                        <li>**الدوري السعودي للمحترفين:** 🥇 19 لقبًا (الرقم القياسي)</li>
-                        <li>**كأس خادم الحرمين الشريفين:** 👑 10 ألقاب</li>
-                        <li>**كأس ولي العهد:** 🥈 13 لقبًا (الرقم القياسي)</li>
-                        <li>**كأس السوبر السعودي:** 🌟 4 ألقاب</li>
-                    </ul>
-                </div>
-                </div>
-        </div>
-    </section>
+.section.dark {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
 
-    <section id="squad" class="section">
-        <div class="container">
-            <h2>🌟 نجوم الفريق الأول حالياً</h2>
-            <p class="subtitle">كوكبة من النجوم العالميين والمحليين يقودون الزعيم الآن.</p>
-            <div class="players-grid">
-                <div class="player-card">
-                    <div class="player-image"></div>
-                    <h4>ألكسندر ميتروفيتش</h4>
-                    <p>المركز: هجوم</p>
-                </div>
-                <div class="player-card">
-<div class="player-image"></div>
-                    <h4>روبن نيفيز</h4>
-                    <p>المركز: وسط</p>
-                </div>
-                <div class="player-card">
-                    <div class="player-image"></div>
-                    <h4>كاليدو كوليبالي</h4>
-                    <p>المركز: دفاع</p>
-                </div>
-                <div class="player-card">
-                    <div class="player-image"></div>
-                    <h4>سالم الدوسري</h4>
-                    <p>المركز: جناح</p>
-                </div>
-            </div>
-        </div>
-    </section>
+.section h2 {
+    font-size: 2.5em;
+    font-weight: 900;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 15px;
+}
 
-    <section id="stars" class="section dark">
-        <div class="container">
-            <h2>💙 أساطير لن تُنسى</h2>
-            <p class="subtitle">لاعبون حفروا أسماءهم من ذهب في تاريخ النادي.</p>
-            <div class="legends-grid">
-                <div class="legend-card">
-                    <h3>سامي الجابر</h3>
-                    <p>السهم الملتهب، أيقونة الهجوم الهلالي والكرة السعودية.</p>
-                </div>
-                <div class="legend-card">
-                    <h3>يوسف الثنيان</h3>
-                    <p>الفيلسوف، صاحب المهارات الفريدة واللمسة الساحرة.</p>
-                </div>
-                <div class="legend-card">
-                    <h3>محمد الدعيع</h3>
-                    <p>الأخطبوط، حارس القرن الآسيوي وصاحب الرقم القياسي.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+.section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-blue);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
 
-    <section id="arena" class="section">
-        <div class="container">
-            <h2>🏟️ معقل الزعيم - المملكة آرينا</h2>
-            <div class="arena-content">
-                <div class="arena-details">
-                    <p>
-                        المملكة آرينا (Kingdom Arena) هو الملعب الرسمي والحديث لنادي الهلال. يُعد صرحاً رياضياً متطوراً تم تدشينه مؤخراً ليواكب تطلعات النادي وجماهيره.
-                    </p>
-                    <ul>
-                        <li>**السعة:** تزيد عن 26,000 متفرج.</li>
-                        <li>**الموقع:** مدينة الرياض، المملكة العربية السعودية.</li>
-                        <li>**المميزات:** يتميز بتقنيات حديثة وتصميم فريد يجعله من أجمل الملاعب في المنطقة.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+.subtitle {
+    font-size: 1.2em;
+    color: #e0e0e0;
+    margin-bottom: 40px;
+}
 
-    <footer class="footer dark">
-        <div class="container">
-            <div class="footer-links">
-                <a href="#">تواصل معنا</a>
-                <a href="#">سياسة الخصوصية</a>
-            </div>
-            <p>© 2025 جميع الحقوق محفوظة لنادي الهلال السعودي – تصميم Group 1</p>
-            <p>تابعنا على: [Social Media Icons]</p>
-        </div>
-    </footer>
+.header {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 
-</body>
-</html>
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 900;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+}
+
+.header ul li {
+    margin-right: 25px;
+}
+
+.header ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 5px 0;
+    position: relative;
+}
+
+.header ul li a:hover {
+    color: var(--secondary-blue);
+}
+
+.header ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--white);
+    transition: width 0.3s ease;
+}
+
+.header ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.hero {
+    background-image: url('https://almrj3.com/wp-content/uploads/…/hilal-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    z-index: 1;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 4em;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: var(--secondary-blue);
+    color: var(--white);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    border: 2px solid var(--secondary-blue);
+}
+
+.cta-button:hover {
+    background-color: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.history-grid {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    flex: 2;
+    padding: 20px;
+    border-right: 4px solid var(--secondary-blue);
+    text-align: justify;
+}
+
+.image-content {
+    flex: 1;
+}
+
+.image-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.caption {
+    margin-top: 10px;
+    font-style: italic;
+    color: var(--primary-blue);
+}
+
+.trophies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.trophy-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.trophy-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.trophy-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.trophy-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.trophy-card ul li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.players-grid {
+    display: grid;
