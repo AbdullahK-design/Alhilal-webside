@@ -1,4 +1,7 @@
-color: var(--primary-blue);
+caption {
+    margin-top: 10px;
+    font-style: italic;
+    color: var(--primary-blue);
 }
 
 /* ==== قسم الإنجازات (Trophies) ==== */
@@ -40,10 +43,6 @@ color: var(--primary-blue);
     border-bottom: 1px dashed #eee;
 }
 
-.trophy-card ul li:last-child {
-    border-bottom: none;
-}
-
 /* ==== قسم نجوم الفريق (Squad) ==== */
 .players-grid {
     display: grid;
@@ -65,10 +64,8 @@ color: var(--primary-blue);
 }
 
 .player-image {
-    /* مكان الصورة */
     height: 250px;
-    background-color: var(--primary-blue);
-    /* يجب استبدالها بصورة حقيقية */
+    background-color: var(--primary-blue); /* لون Placeholder للصورة */
 }
 
 .player-card h4 {
@@ -92,7 +89,7 @@ color: var(--primary-blue);
 }
 
 .legend-card {
-    background-color: var(--primary-blue);
+    background-color: var(--primary-blue); /* خلفية زرقاء داكنة */
     padding: 25px;
     border-radius: 10px;
     text-align: center;
@@ -136,7 +133,7 @@ color: var(--primary-blue);
 
 .arena-content ul li {
     background-color: var(--light-gray);
-    border-right: 3px solid var(--secondary-blue);
+    border-right: 3px solid var(--secondary-blue); /* خط أزرق مميز */
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px 0 0 5px;
@@ -162,11 +159,7 @@ color: var(--primary-blue);
     color: var(--white);
 }
 
-.footer p {
-    margin-top: 15px;
-}
-
-/* استجابة التصميم (Media Queries) */
+/* استجابة التصميم (Media Queries) لجعل الموقع يعمل على الجوالات */
 @media (max-width: 900px) {
     .header nav {
         flex-direction: column;
