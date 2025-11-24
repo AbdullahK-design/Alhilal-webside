@@ -1,0 +1,81 @@
+/* الألوان الأساسية */
+:root {
+    --primary-blue: #004d9c; 
+    --secondary-blue: #1e88e5; 
+    --white: #ffffff;
+    --light-gray: #f4f4f4;
+    --dark-bg: #1a1a1a; 
+    --text-color: #333;
+}
+
+/* التنسيقات الأساسية */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Cairo', sans-serif; line-height:1.6; background-color:var(--white); color:var(--text-color); direction:rtl; }
+
+.container { width:90%; max-width:1200px; margin:0 auto; }
+.section { padding:80px 0; text-align:center; }
+.section.dark { background-color:var(--light-gray); color:var(--dark-bg); }
+.section h2 { font-size:2.5em; margin-bottom:10px; color:var(--primary-blue); position:relative; padding-bottom:15px; }
+.section h2::after { content:''; display:block; width:60px; height:4px; background-color:var(--secondary-blue); margin:10px auto 0; border-radius:2px; }
+.subtitle { font-size:1.2em; color:#666; margin-bottom:40px; }
+
+/* الهيدر */
+.header { background-color:var(--primary-blue); color:var(--white); padding:15px 0; position:sticky; top:0; z-index:1000; box-shadow:0 2px 5px rgba(0,0,0,0.2);}
+.header nav { display:flex; justify-content:space-between; align-items:center;}
+.logo { font-size:1.8em; font-weight:900; }
+.header ul { list-style:none; display:flex; }
+.header ul li { margin-right:25px; }
+.header ul li a { color:var(--white); text-decoration:none; font-weight:700; padding:5px 0; position:relative; }
+.header ul li a:hover { color:var(--light-gray);}
+.header ul li a::after { content:''; position:absolute; bottom:-5px; right:0; width:0; height:3px; background-color:var(--white); transition:width 0.3s ease;}
+.header ul li a:hover::after { width:100%; left:0; }
+
+/* Hero Section */
+.hero { background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Alhilal_Stadium_Riyadh.jpg/1200px-Alhilal_Stadium_Riyadh.jpg'); background-size:cover; background-position:center; height:70vh; display:flex; justify-content:center; align-items:center; position:relative; color:var(--white); text-shadow:2px 2px 4px rgba(0,0,0,0.7);}
+.hero .overlay { position:absolute; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5);}
+.hero-content { z-index:1; text-align:center;}
+.hero h2 { font-size:4em; margin-bottom:10px; font-weight:900;}
+.hero p { font-size:1.5em; margin-bottom:30px;}
+.cta-button { display:inline-block; background-color:var(--secondary-blue); color:var(--white); padding:12px 30px; text-decoration:none; border-radius:5px; font-weight:700; transition:background-color 0.3s ease, transform 0.2s; border:2px solid var(--secondary-blue);}
+.cta-button:hover { background-color:var(--primary-blue); transform:translateY(-2px); border-color:var(--primary-blue); }
+
+/* History */
+.history-grid { display:flex; align-items:center; text-align:right; gap:40px; }
+.history-grid .text-content { flex:2; font-size:1.1em; padding:20px; border-right:4px solid var(--secondary-blue); text-align:justify; }
+.history-grid .image-content { flex:1; border-radius:10px; overflow:hidden; }
+.history-grid .image-content img { width:100%; border-radius:10px; }
+.history-grid .caption { margin-top:10px; font-style:italic; color:var(--primary-blue); }
+
+/* Trophies */
+.trophies-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:30px; text-align:right; margin-top:40px;}
+.trophy-card { background-color:var(--white); padding:30px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s;}
+.trophy-card:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.15);}
+.trophy-card h3 { color:var(--primary-blue); margin-bottom:15px; border-bottom:2px solid var(--light-gray); padding-bottom:10px; font-size:1.5em;}
+.trophy-card ul { list-style:none; }
+.trophy-card ul li { padding:8px 0; border-bottom:1px dashed #eee; }
+
+/* Squad */
+.players-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:30px; margin-top:40px;}
+.player-card { background-color:var(--white); border-radius:10px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition:transform 0.3s;}
+.player-card:hover { transform:scale(1.05);}
+.player-image { height:250px; background-size:cover; background-position:center; }
+.player-card h4 { color:var(--primary-blue); margin-top:15px;}
+.player-card p { margin-bottom:15px; font-size:0.9em; color:#666;}
+
+/* Legends */
+.legends-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:30px; margin-top:40px; color:var(--white);}
+.legend-card { background-color:var(--primary-blue); padding:25px; border-radius:10px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.3);}
+.legend-card h3 { margin-bottom:10px; font-size:1.8em; color:var(--light-gray);}
+.legend-card p { font-style:italic; font-size:1em;}
+.legend-card img { width:150px; border-radius:50%; margin-bottom:10px; }
+
+/* Arena */
+.arena-content { display:flex; align-items:center; gap:40px; text-align:right; margin-top:40px;}
+.arena-content .arena-details { flex:2;}
+.arena-content .arena-details p { font-size:1.1em; margin-bottom:20px; line-height:1.8; }
+.arena-content ul { list-style:none; padding-right:0;}
+.arena-content ul li { background-color:var(--light-gray); border-right:3px solid var(--secondary-blue); margin-bottom:10px; padding:10px; border-radius:5px 0 0 5px; }
+
+/* Footer */
+.footer { background-color:var(--dark-bg); color:var(--light-gray); padding:30px 0; text-align:center; font-size:0.9em;}
+.footer-links a { color:var(--secondary-blue); text-decoration:none; margin:0 
